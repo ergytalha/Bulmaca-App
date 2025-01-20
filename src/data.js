@@ -1,19 +1,30 @@
-export const DATA = [ 
-    {
-        question: "Dünyanın en iyi çifti ? ", answer: "Nur&Talha",
-
-    },
-    {
-        question: "Dünyanın En Yakışıklısı ", answer: "Talha",
-    },
-    {
-        question: "Türkiyenin en iyi futbol takımı ", answer: "Fenerbahçe",
-    },
-    {
-        question: "Dünyanın En Güzel Rengi ", answer: "Sarı",
-    },
-    {
-        question: "Dünyanın En Güzel Diğer Rengi ", answer: "Lacivert",
-    }
-
-]
+export const DATA = [
+  {
+    question: "Dünyanın En Salak Sevgilisi",
+    answer: "Nur",
+  },
+  {
+    question: "Dünyanın en iyi çifti ? ",
+    answer: "Nur&Talha",
+  },
+  {
+    question: "Dünyanın En Yakışıklısı ",
+    answer: "Talha",
+  },
+  {
+    question: "Dünyanın En Güzel Rengi ",
+    answer: "Ela",
+  },
+  {
+    question: "Dünyanın En Yetenekli Kızı",
+    answer: "Nur",
+  },
+  {
+    question: "Dünyanın En Güzel Kızı",
+    answer: "Nur",
+  },
+  {
+    question: "Dünyanın En Affecidi Sevgilisi",
+    answer: "Nur",
+  },
+];
