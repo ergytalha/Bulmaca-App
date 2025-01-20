@@ -1,7 +1,7 @@
 export const DATA = [
   {
     question: "Dünyanın En Salak Sevgilisi",
-    answer: "Nur",
+    answer: "Talha",
   },
   {
     question: "Dünyanın en iyi çifti ? ",
