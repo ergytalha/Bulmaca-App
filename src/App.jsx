@@ -10,43 +10,37 @@ function App() {
   const [answers, setAnswers] = useState("");
   const [answerArray, setAnswerArray] = useState([]);
   const [keywords, setKeywords] = useState([]);
-  const [correctCount, setCorrectCount] = useState(0); // Doğru cevap sayısı
-  const [wrongCount, setWrongCount] = useState(0); // Yanlış cevap sayısı
-  const [isQuizFinished, setIsQuizFinished] = useState(false); // Quiz bitiş durumu
-  const [correctAnswers, setCorrectAnswers] = useState([]); // Doğru cevaplar listesi
+  const [correctCount, setCorrectCount] = useState(0);
+  const [wrongCount, setWrongCount] = useState(0);
+  const [isQuizFinished, setIsQuizFinished] = useState(false);
+  const [correctAnswers, setCorrectAnswers] = useState([]);
 
-  const shuffle = (array) => { 
-    return array.sort(() => Math.random() - 0.5);
-  };
+  const shuffle = (array) => array.sort(() => Math.random() - 0.5);
 
-  const setKeyword = (keyword) => { 
+  const setKeyword = (keyword) => {
     if (keywords.length < answers.length) {
       keywords.push(keyword);
       setKeywords([...keywords]);
-    } 
+    }
     if (keywords.length === answers.length) {
-      if (answers === keywords.join("")) {
+      const isCorrect = answers === keywords.join("");
+      if (isCorrect) {
         setCorrectCount(correctCount + 1);
-        setCorrectAnswers([...correctAnswers, answers]); // Doğru cevabı kaydet
-        if (index + 1 < DATA.length) {
-          setIndex(index + 1); // Bir sonraki soruya geç
-        } else {
-          setIsQuizFinished(true); // Quiz bitti
-        }
       } else {
         setWrongCount(wrongCount + 1);
-        if (index + 1 < DATA.length) {
-          setIndex(index + 1); // Bir sonraki soruya geç
-        } else {
-          setIsQuizFinished(true); // Quiz bitti
-        }
+      }
+      setCorrectAnswers([...correctAnswers, answers]);
+      if (index + 1 < DATA.length) {
+        setIndex(index + 1);
+      } else {
+        setIsQuizFinished(true);
       }
       setKeywords([]);
     }
   };
 
-  useEffect(() => { 
-    if (!isQuizFinished && typeof DATA[index] !== 'undefined') { 
+  useEffect(() => {
+    if (!isQuizFinished && typeof DATA[index] !== "undefined") {
       const answer = DATA[index].answer.toLowerCase();
       setAnswers(answer);
       setQuestion(DATA[index].question);
@@ -59,7 +53,7 @@ function App() {
     }
   }, [index, isQuizFinished]);
 
-  const removeKeyword = (index) => { 
+  const removeKeyword = (index) => {
     keywords.splice(index, 1);
     setKeywords([...keywords]);
   };
@@ -82,7 +76,7 @@ function App() {
         <>
           <div>
             <span>{question}</span>
-          </div>  
+          </div>
           <div>
             {keywords.map((item, index) => (
               <span onClick={() => removeKeyword(index)} key={index}>
