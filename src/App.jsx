@@ -13,6 +13,7 @@ function App() {
   const [correctCount, setCorrectCount] = useState(0); // Doğru cevap sayısı
   const [wrongCount, setWrongCount] = useState(0); // Yanlış cevap sayısı
   const [isQuizFinished, setIsQuizFinished] = useState(false); // Quiz bitiş durumu
+  const [correctAnswers, setCorrectAnswers] = useState([]); // Doğru cevaplar listesi
 
   const shuffle = (array) => { 
     return array.sort(() => Math.random() - 0.5);
@@ -26,6 +27,7 @@ function App() {
     if (keywords.length === answers.length) {
       if (answers === keywords.join("")) {
         setCorrectCount(correctCount + 1);
+        setCorrectAnswers([...correctAnswers, answers]); // Doğru cevabı kaydet
         if (index + 1 < DATA.length) {
           setIndex(index + 1); // Bir sonraki soruya geç
         } else {
@@ -69,6 +71,12 @@ function App() {
           <h1>Quiz Tamamlandı!</h1>
           <p>Doğru Sayısı: {correctCount}</p>
           <p>Yanlış Sayısı: {wrongCount}</p>
+          <h2>Doğru Cevaplar:</h2>
+          <ul>
+            {correctAnswers.map((answer, i) => (
+              <li key={i}>{answer}</li>
+            ))}
+          </ul>
         </div>
       ) : (
         <>
