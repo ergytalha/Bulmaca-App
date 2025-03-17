@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(to bottom right, #000000, #2575fc);
+  background: linear-gradient(to bottom right, #1a2a6c, #b21f1f, #fdbb2d); /* Daha zengin ve canlı bir gradyan */
   color: #fff;
   display: flex;
   justify-content: center;
@@ -15,13 +15,15 @@ body {
 
 .App {
   text-align: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.25); /* Daha koyu, şık bir arka plan */
   border-radius: 12px;
   padding: 40px 30px;
   width: 90%;
   max-width: 400px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px); /* Cam efekti için blur */
   animation: fadeIn 0.8s ease;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 span {
@@ -33,8 +35,8 @@ span {
 }
 
 button {
-  background: #fff;
-  color: #2575fc;
+  background: linear-gradient(145deg, #2e3192, #1bffff); /* Güzel bir mavi tonlarında gradyan */
+  color: #fff;
   border: none;
   border-radius: 8px;
   font-size: 1rem;
@@ -48,6 +50,7 @@ button {
 
 button:hover {
   transform: scale(1.1);
+  background: linear-gradient(145deg, #3f41a5, #26d0de); /* Hover durumunda biraz daha koyu tonlar */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -58,16 +61,19 @@ button:active {
 
 div > span {
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
   padding: 5px 10px;
   border-radius: 6px;
   margin: 5px;
   display: inline-block;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 div > span:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3));
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes fadeIn {
