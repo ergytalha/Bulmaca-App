@@ -1,30 +1,30 @@
 export const DATA = [
   {
-    question: "Dünyanın En Salak Sevgilisi",
-    answer: "Talha",
+    question: "Dünya'nın en büyük okyanusu hangisidir?",
+    answer: "Pasifik Okyanusu",
   },
   {
-    question: "Dünyanın en iyi çifti ? ",
-    answer: "Nur&Talha",
+    question: "Türkiye'nin başkenti hangi şehirdir?",
+    answer: "Ankara",
   },
   {
-    question: "Dünyanın En Yakışıklısı ",
-    answer: "Talha",
+    question: "Periyodik tablodaki ilk element hangisidir?",
+    answer: "Hidrojen",
   },
   {
-    question: "Dünyanın En Güzel Rengi ",
-    answer: "Ela",
+    question: "İnsan vücudundaki en büyük organ hangisidir?",
+    answer: "Deri",
   },
   {
-    question: "Dünyanın En Yetenekli Kızı",
-    answer: "Nur",
+    question: "Hangisi bir programlama dili değildir?",
+    answer: "HTML",
   },
   {
-    question: "Dünyanın En Güzel Kızı",
-    answer: "Nur",
+    question: "Bir yılda kaç ay vardır?",
+    answer: "12",
   },
   {
-    question: "Dünyanın En Affecidi Sevgilisi",
-    answer: "Nur",
+    question: "Dünyanın en yüksek dağı hangisidir?",
+    answer: "Everest",
   },
 ];
